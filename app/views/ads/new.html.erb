@@ -12,10 +12,13 @@
 
   <p>
     <%= f.label :category %><br>
-    <%= f.collection_select :category_id, MCategory.all, :id, :name %>
+    <%= f.collection_select :m_category_id, MCategory.order(:name), :id, :name %>
   </p>
 
-  
+  <p>
+    <%= f.label :category %><br>
+    <%= f.collection_select :d_category_id, DCategory.order(:name), :id, :name %>
+  </p>
 
   <p>
     <%= f.submit %>
