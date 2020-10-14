@@ -12,12 +12,10 @@
 
   <p>
     <%= f.label :category %><br>
-    <%= f.select(:category_id) do %>
-      <% [['Lisbon', 1], ['Madrid', 2], ['Bern', 3]].each do |c| -%>
-        <%= content_tag(:option, c.first, value: c.last) %>
-      <% end %>
-    <% end %>
+    <%= f.collection_select :category_id, MCategory.all, :id, :name %>
   </p>
+
+  
 
   <p>
     <%= f.submit %>
