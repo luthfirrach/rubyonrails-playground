@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :ads do
     resources :comments
   end
+  resources :categories
 
 end
