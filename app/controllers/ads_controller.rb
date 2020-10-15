@@ -1,6 +1,7 @@
 class AdsController < ApplicationController
   def index
     @ads = Ad.all
+    @cats = MCategory.all
   end
   def show
     @ad = Ad.find(params[:id])
