@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   # Regular routes
 
   # Resource routes
-  resource :ads
+  resources :ads
 
 end

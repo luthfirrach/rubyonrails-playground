@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201014225831) do
+ActiveRecord::Schema.define(version: 20201015004514) do
+
+  create_table "ads", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "m_category_id"
+    t.integer "d_category_id"
+    t.string "condition"
+    t.string "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "d_categories", force: :cascade do |t|
     t.string "name"
