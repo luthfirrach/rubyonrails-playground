@@ -3,16 +3,20 @@ class AdsController < ApplicationController
     @ads = Ad.all
   end
   def show
-    @ads = Ad.find(params[:id])
+    @ad = Ad.find(params[:id])
   end
   def new
+    @ad = Ad.new
   end
   def create
     # render plain: params[:post].inspect
-    @ads = Ad.new(post_params)
+    @ad = Ad.new(post_params)
 
-    @ads.save
-    redirect_to @ads
+    if(@ad.save)
+      redirect_to @ad
+    else
+      render 'new'
+    end
   end
   private def post_params
     params.require(:post).permit(:title, :description, :m_category_id, :d_category_id, :condition, :price)
