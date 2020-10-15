@@ -5,7 +5,7 @@
       <div class="row mt-3">
         <div class="col">
           <% @cats.each do |cat| %>
-            <%= link_to cat.name, categories_path, {:class => 'text-white bg-warning rounded'} %>
+            <%= link_to cat.name, category_path(cat), {:class => 'text-white bg-warning rounded'} %>
           <% end %>
         </div>
         
