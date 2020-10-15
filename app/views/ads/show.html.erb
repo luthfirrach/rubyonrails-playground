@@ -1,4 +1,10 @@
-<h3><%= @ad.title %></h3>
-<h2><%= @ad.description %></h2>
-<p><%= @ad.condition %></p>
-<p><%= @ad.price %></p>
+
+
+<div class="border border-secondary mt-3">
+  <div class="img-thumbnail" style="width: 10vw; height: 10vh">
+    <%= @ad.title %>
+  </div>
+  <p><%= @ad.description %></p>
+  <p><%= @ad.condition %> </p>
+  <p><%= number_to_currency(@ad.price, unit:"Rp ") %> </p>
+</div>

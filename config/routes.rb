@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # Regular routes
 
   # Resource routes
-  resources :ads
+  resources :ads do
+    resources :comments
+  end
 
 end
