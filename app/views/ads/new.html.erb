@@ -23,7 +23,7 @@
 
   <p>
     <%= f.label :"detail category" %><br>
-    <%= f.grouped_collection_select :d_category_id, MCategory.order(:name), :d_category, :name, :id, :name %>
+    <%= f.grouped_collection_select :d_category_id, MCategory.order(:name), :d_categories, :name, :id, :name %>
   </p>
 
   <p>

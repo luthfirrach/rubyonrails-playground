@@ -7,6 +7,16 @@
   <p><%= number_to_currency(@ad.price, unit:"Rp ") %> </p>
 </div>
 
+<div>
+  <h3>Comment</h3>
+  <% @ad.comments.each do |comment| %>
+    <div class="well">
+      <p><strong>  <%= comment.username %></strong>:<%= comment.body %> </p>
+      
+    </div>
+  <% end %>
+</div>
+
 <%= form_for([@ad, @ad.comments.build]) do |f| %>
 
   <p>
