@@ -1,5 +1,5 @@
 <h1>Post your Ads!</h1>
-<%= form_for :post, url: ads_path do |f| %>
+<%= form_for :post , url: ads_path do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -16,8 +16,21 @@
   </p>
 
   <p>
-    <%= f.label :category %><br>
-    <%= f.collection_select :d_category_id, DCategory.order(:name), :id, :name %>
+    <%= f.label :"detail category" %><br>
+    <%= f.grouped_collection_select :d_category_id, MCategory.order(:name), :d_category, :name, :id, :name %>
+  </p>
+
+  <p>
+    <%= f.label :condition %><br>
+    <%= f.radio_button(:condition, "new") %>
+    <%= f.label(:condition_new, "New") %>
+    <%= f.radio_button(:condition, "used") %>
+    <%= f.label(:condition_used, "Used") %>
+  </p>
+
+  <p>
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
   </p>
 
   <p>
