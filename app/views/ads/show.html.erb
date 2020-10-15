@@ -1,5 +1,3 @@
-
-
 <div class="border border-secondary mt-3">
   <div class="img-thumbnail" style="width: 10vw; height: 10vh">
     <%= @ad.title %>
@@ -8,3 +6,21 @@
   <p><%= @ad.condition %> </p>
   <p><%= number_to_currency(@ad.price, unit:"Rp ") %> </p>
 </div>
+
+<%= form_for([@ad, @ad.comments.build]) do |f| %>
+
+  <p>
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </p>
+
+  <p>
+    <%= f.label :comment %><br>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
