@@ -5,19 +5,20 @@ application up and running.
 
 Things you may want to cover:
 
-- Ruby version
+- Ruby version : <br>
   2.3
 
 - System dependencies
 
 - Configuration
 
-- Database creation
+- Database creation : <br>
+  rake db:migrate
+
+- Database initialization : <br>
   Uncomment all record on seeds.rb <br>
   rake db:seed <br>
   to get master and detail categories
-
-- Database initialization
 
 - How to run the test suite
 
