@@ -1,17 +1,18 @@
 
   <div class="row mt-3">
     <div class="col-md-3 text-center">
-      <h3>Kategori</h3>
+      <div class="row">
+        <div class="col">
+          <h3>Kategori</h3>
+        </div>
+      </div>
       <div class="row mt-3">
-
         <div class="col">
           <% @cats.each do |cat| %>
-            <%= link_to cat.name, category_path(cat) , {:class => 'text-white bg-warning rounded'} %>
+            <%= link_to cat.name, category_path(cat) , {:class => 'text-white bg-warning rounded-pill d-block mb-1'} %>
           <% end %>
         </div>
-        
       </div>
-      
     </div>
 
     <div class="col-md-9 text-center">
