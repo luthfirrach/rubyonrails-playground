@@ -13,8 +13,9 @@ Things you may want to cover:
 - Configuration
 
 - Database creation
-  Uncomment all record on seeds.rb to get master and detail categories
-  rake db:seed
+  Uncomment all record on seeds.rb <br>
+  rake db:seed <br>
+  to get master and detail categories
 
 - Database initialization
 
