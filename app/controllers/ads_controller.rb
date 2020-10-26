@@ -19,6 +19,13 @@ class AdsController < ApplicationController
       render 'new'
     end
   end
+  def destroy
+    @ad = Ad.find(params[:id])
+    @ad.destroy
+
+    redirect_to ads_path
+  end
+
   private def post_params
     params.require(:post).permit(:title, :description, :image, :m_category_id, :d_category_id, :condition, :price)
   end

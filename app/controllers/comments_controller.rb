@@ -5,6 +5,14 @@ class CommentsController < ApplicationController
     redirect_to ad_path(@ad)
   end
 
+  def destroy
+    @ad = Ad.find(params[:ad_id])
+    @comment = @ad.comments.find(params[:id])
+    @comment.destroy
+
+    redirect_to ad_path(@ad)
+  end
+
   private def comment_params
     params.require(:comment).permit(:username, :body)
   end

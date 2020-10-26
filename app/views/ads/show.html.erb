@@ -2,17 +2,22 @@
   <div class="img-thumbnail" style="width: 10vw; height: 10vh">
     <%= @ad.title %>
   </div>
-  <p><%= image_tag(@ad.image) %></p>
   <p><%= @ad.description %></p>
   <p><%= @ad.condition %> </p>
   <p><%= number_to_currency(@ad.price, unit:"Rp ") %> </p>
 </div>
 
+<%= link_to "Delete", ad_path(@ad), method: :delete, :class => 'btn btn-danger'%>
+
 <div>
   <h3>Comment</h3>
   <% @ad.comments.each do |comment| %>
     <div class="well">
-      <p><strong>  <%= comment.username %></strong>:<%= comment.body %> </p>
+      <p>
+      <strong><%= comment.username %></strong>:
+      <%= comment.body %> 
+      <%= link_to "Delete", [comment.ad, comment], method: :delete, :class => 'btn btn-danger'%>
+      </p>
       
     </div>
   <% end %>

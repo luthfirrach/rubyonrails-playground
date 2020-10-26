@@ -6,45 +6,47 @@
     <% end %>
   <% end %>
 
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+  <div>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field(:title, {:class => 'form-control'}) %>
+    </p>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_area(:description, {:class => 'form-control'} ) %>
+    </p>
 
-  </p>
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  <p>
+    </p>
+      <%= f.label :image %><br>
+      <%= f.file_field :image %>
+    <p>
 
-  <p>
-    <%= f.label :category %><br>
-    <%= f.collection_select :m_category_id, MCategory.order(:name), :id, :name %>
-  </p>
+    <div class="field">
+      <%= f.label :category %><br>
+      <%= f.collection_select :m_category_id, MCategory.order(:name), :id, :name %>
+    </div>
 
-  <p>
-    <%= f.label :"detail category" %><br>
-    <%= f.grouped_collection_select :d_category_id, MCategory.order(:name), :d_categories, :name, :id, :name %>
-  </p>
+    <p>
+      <%= f.label :"detail category" %><br>
+      <%= f.grouped_collection_select :d_category_id, MCategory.order(:name), :d_categories, :name, :id, :name %>
+    </p>
 
-  <p>
-    <%= f.label :condition %><br>
-    <%= f.radio_button(:condition, "new") %>
-    <%= f.label(:condition_new, "New") %>
-    <%= f.radio_button(:condition, "used") %>
-    <%= f.label(:condition_used, "Used") %>
-  </p>
+    <p>
+      <%= f.label :condition %><br>
+      <%= f.radio_button(:condition, "new") %>
+      <%= f.label(:condition_new, "New") %>
+      <%= f.radio_button(:condition, "used") %>
+      <%= f.label(:condition_used, "Used") %>
+    </p>
 
-  <p>
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </p>
+    <p>
+      <%= f.label :price %><br>
+      <%= f.text_field(:price, {:class => "form-control"}) %>
+    </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  </div>
 <% end %>
