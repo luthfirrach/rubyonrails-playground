@@ -16,6 +16,11 @@
     <%= f.text_area :description %>
   </p>
 
+  </p>
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  <p>
+
   <p>
     <%= f.label :category %><br>
     <%= f.collection_select :m_category_id, MCategory.order(:name), :id, :name %>

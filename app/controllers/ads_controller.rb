@@ -20,6 +20,6 @@ class AdsController < ApplicationController
     end
   end
   private def post_params
-    params.require(:post).permit(:title, :description, :m_category_id, :d_category_id, :condition, :price)
+    params.require(:post).permit(:title, :description, :image, :m_category_id, :d_category_id, :condition, :price)
   end
 end
