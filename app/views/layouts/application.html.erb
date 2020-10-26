@@ -13,16 +13,16 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-warning shadow-sm">
       <div class="container">
         <%# <a class="navbar-brand" href="#">Belio</a> %>
-        <%= link_to "Belio", home_path, {:class => "navbar-brand"} %>
+        <%= link_to image_tag(srcset="https://storage.jualo.com/logos/jualo/logo.png", {:style => "width: 55%"}), home_path, {:class => "navbar-brand"} %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <%= link_to "home", home_path, {:class => 'nav-link'} %>
-            </li>
+            <%# <li class="nav-item active">
+              <%= link_to "home", home_path, {:class => 'nav-link'} 
+            </li> %>
             <%# <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
