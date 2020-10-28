@@ -6,7 +6,14 @@ application up and running.
 Things you may want to cover:
 
 - Ruby version : <br>
-  2.3
+  $ ruby -v <br>
+  ruby 2.3.3p222 (2016-11-21 revision 56859) [i386-mingw32] <br>
+  $ rails -v <br>
+  Rails 5.2.4.4 <br>
+  $ gem -v <br>
+  2.5.2 <br>
+  $ bundler -v <br>
+  Bundler version 2.2.0.rc.2
 
 - System dependencies
 
@@ -16,9 +23,9 @@ Things you may want to cover:
   rake db:migrate
 
 - Database initialization : <br>
+  Get dummy master and detail categories <br>
   Uncomment all record on seeds.rb <br>
   rake db:seed <br>
-  to get master and detail categories
 
 - How to run the test suite
 
