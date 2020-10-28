@@ -17,7 +17,10 @@ Things you may want to cover:
 
 - System dependencies
 
-- Configuration
+- Configuration <br>
+  because i'm ignoring tmp folder <br>
+  you have to manualy create <br>
+  storage folder inside tmp folder for saving uploaded pictures
 
 - Database creation : <br>
   rake db:migrate
